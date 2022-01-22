@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Sparkle Party</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+      function sparkleParty() {
+        let container = document.querySelector('.container')
+
+        for(let index = 500; index >= 0; index--) {
+          let div = document.createElement("div");
+          div.classList.add("confetti-" + index.toString())
+          container.appendChild(div);
+        }
+      }
+      window.addEventListener('DOMContentLoaded', (event) => {
+        sparkleParty();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>This is cool :)</h1>
+    <div class="container"></div>
+  </body>
+</html>
